@@ -12,6 +12,22 @@ body {
     margin: 0 auto;
 }
 
+.title {
+    font-size: 34px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hr {
+    width: 100px;
+    height: 1px;
+    background-color: #000;
+    margin-bottom: 40px;
+}
+
 
 
 
@@ -24,10 +40,11 @@ body {
     background: url(../img/intro/BG-Header.jpg) no-repeat;
     background-size: cover;
     background-position: bottom center;
+    background-attachment: fixed;
 }
 
 .intro_cont {
-    padding: 150px 0;
+    padding: 60px 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -80,7 +97,7 @@ body {
 }
 
 .intro_button_d {
-    margin-top: 40%;
+    margin-top: 60%;
     height: 170px;
 }
 
@@ -146,6 +163,8 @@ body {
 .menu {
     position: relative;
     height: 55px;
+    border-bottom: 1px #c4c4c4 solid;
+    margin-bottom: 140px;
 }
 
 .menu_nav ul {
@@ -164,16 +183,15 @@ body {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    color: #000;
+    color: #818181;
     padding: 20px 30px;
-    font-size: 15px;
-    font-weight: 400;
-    transition: all .2s linear;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .1s linear;
 }
 
 .menu_nav ul li a:hover {
-    color: #ffffff;
-    font-weight: 600;
+    color: #3b3b3b;
 }
 
 .menu_nav ul li a::after {
@@ -181,11 +199,11 @@ body {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgba(33, 33, 33, 0.47);
+    background-color: rgba(144, 144, 144, 0.21);
     top: 0;
     left: -100%;
     transform: translateX(0);
-    transition: all .2s linear;
+    transition: all .3s linear;
     z-index: -1;
 }
 
@@ -198,15 +216,294 @@ body {
 
 
 
-.hr {
+
+
+
+/*ABOUT*/
+
+.about {
+    margin-bottom: 100px;
+}
+
+.about_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_title h2 {
+    margin-bottom: 40px;
+}
+
+.about_title p {
+    font-size: 16px;
+    color: #818181;
+    text-align: center;
     width: 100%;
-    height: 1px;
-    background-color: #c4c4c4;
-    margin-bottom: 500px;
+    max-width: 800px;
+    line-height: 30px;
+    margin-bottom: 80px;
+}
+
+.about_services {
+    display: flex;
+}
+
+.about_services_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.3333%;
+}
+
+.about_services_item img {
+    width: 100%;
+    max-width: 110px;
+}
+
+.about_services_item h3 {
+    margin: 30px 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.about_services_item p {
+    color: #818181;
+    font-size: 16px;
+
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    line-height: 30px;
+    margin: auto 0 0 0;
 }
 
 
 
+
+
+
+
+
+
+/*PORTFOLIO*/
+
+.portfolio {
+    background-color: rgba(144, 144, 144, 0.21);
+    padding-bottom: 100px;
+}
+
+.portfolio_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio_title h2 {
+    letter-spacing: 7px;
+    padding-top: 140px;
+}
+
+.portfolio_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 700px;
+}
+
+.portfolio_item_filter {
+    position: relative;
+}
+
+.filter_item:hover {
+    cursor: pointer;
+}
+
+.filter__list {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.filter_item {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0 15px;
+    transition: all .2s linear;
+    animation: scalee 1s infinite linear;
+}
+
+.filter_item:hover {
+    transform: scale(1.1);
+    color: #585757;
+}
+
+.filter_focus {
+    transform: scale(1.1);
+    color: #585757;
+}
+
+@keyframes scalee {
+    0% {letter-spacing: 0px;}
+    50% {letter-spacing: 1px;}
+    100% {letter-spacing: 0px;}
+}
+
+.portfolio_items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfilio__items {
+    width: 25%;
+    border: 2px #fff solid;
+}
+
+.hide {
+    opacity: 1;
+    animation-name: a1;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes a1 {
+    0%{
+        opacity: 1;
+        transform: : rotateX(90deg);
+    }
+    50%{
+        opacity: 0.5;
+        transform: : rotateX(0deg);
+    }
+    100%{
+        width: 0%;
+        opacity: 0;
+        transform: rotateX(90deg);
+        border: 0px #fff solid;
+    }
+}
+
+.enlarge {
+    animation-name: a2;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes a2 {
+    100% {
+        width: 50%;
+    }
+}
+
+.portfolio_button {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio_button p {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+
+    display: inline-block;
+    border: 1px #000 solid;
+    padding: 15px 30px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio_button p::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transform: translateX(0);
+    background-color: rgb(255, 255, 255);
+    transition: all .2s linear;
+    z-index: -1;
+}
+
+.portfolio_button p:hover::before {
+    transform: translateX(100%);
+}
+
+.increase {
+    opacity: 0;
+    width: 5%;
+    animation-name: a3;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes a3 {
+    100% {
+        opacity: 1;
+        width: 25%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*CONNECTION*/
+
+.connection {
+    background: url(../img/intro/BG-Header.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 100px;
+}
+
+.connection_cont h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.connection_cont_icons {
+    display: flex;
+}
+
+.connection_cont_icons a {
+    text-align: center;
+    width: 25%;
+    transition: all .2s linear;
+}
+
+.connection_cont_icons a:first-child {
+    margin-left: 270px;
+}
+
+.connection_cont_icons a:last-child {
+    margin-right: 270px;
+}
+
+.connection_cont_icons a:hover {
+    transform: scale(1.1);
+}
+
+.connection_cont_icons a img {
+    width: 100%;
+    max-width: 70px;
+}
 
 
 
