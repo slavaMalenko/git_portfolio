@@ -10,8 +10,13 @@
 
 </head>
 <body>
+
+    <div class="arrow">
+        <a href="#intro"><img src="img/intro/arrow.png" alt=""></a>
+    </div>
+
     <!--INTRO start-->
-    <div class="intro">
+    <div id="intro" class="intro">
         <div class="intro_cont">
             <a href="#"><img src="img/intro/intro_s.png" alt="" class="intro_logo"></a>
             <div class="intro_title">
@@ -20,10 +25,8 @@
             </div>
 
             <div class="intro_button_d">
-                <form action="#main">
-                    <button type="submit" class="intro_button scrollto">Read more</button>
-                </form>
-                <a href="#main" class="intro_arrow scrollto"></a>
+                <a href="#main" class="intro_button">Read more</a>
+                <a href="#main" class="intro_arrow"></a>
             </div>
         </div>
     </div>
@@ -33,14 +36,14 @@
         <!--MENU start-->
         <section class="menu">
             <div class="container">
-                <div class="menu_nav">
-                    <ul>
-                        <li><a href="#">Home</a></li>
+                <nav>
+                    <ul id="menu_nav" class="menu_nav">
+                        <li><a href="#intro">Home</a></li>
                         <li><a href="#">About us</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#connection">Contact</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </section>
         <!--MENU end-->
@@ -80,7 +83,7 @@
         <!--ABOUT end-->
 
         <!--PORTFOLIO start-->
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <div class="container">
                 <div class="portfolio_title">
                     <h2 class="title">Portfolio</h2>
@@ -124,34 +127,122 @@
         <!--PORTFOLIO end-->
 
         <!--CONNECTION start-->
-        <section class="connection">
+        <section id="connection" class="connection">
             <div class="container">
                 <div class="connection_cont">
                     <h2>My social networks</h2>
                     <div class="connection_cont_icons">
-                        <a href="#">
-                            <img src="img/connection/Facebook.png" alt="">
-                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/connection/Facebook.png" alt="">
+                                </a>
+                            </li>
 
-                        <a href="#">
-                            <img src="img/connection/Github.png" alt="">
-                        </a>
+                            <li>
+                                <a href="https://github.com/slavaMalenko">
+                                    <img src="img/connection/Github.png" alt="">
+                                </a>
+                            </li>
 
-                        <a href="#">
-                            <img src="img/connection/Instagram.png" alt="">
-                        </a>
+                            <li>
+                                <a href="#">
+                                    <img src="img/connection/Instagram.png" alt="">
+                                </a>
+                            </li>
 
-                        <a href="#">
-                            <img src="img/connection/vk_white.png" alt="">
-                        </a>
+                            <li>
+                                <a href="https://vk.com/id437574824">
+                                    <img src="img/connection/vk_white.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
         <!--CONNECTION end-->
+
+        <!--FEEDBACK start-->
+        <section id="feedback" class="feedback">
+            <div class="container">
+                <div class="feedback_title">
+                    <h2 class="title">Contact</h2>
+                    <div class="hr"></div>
+                </div>
+
+                <div class="feedback_cont">
+                    <div class="feedback_cont_form">
+                        <form action="form.php" class="fcf_cont">
+                            <div class="form__item form_with-50">
+                                <p class="form_p">Your name</p>
+                                <input type="text" class="form_name">
+                            </div>
+
+                            <div class="form__item form_with-50">
+                                <p class="form_p">Your e-mail</p>
+                                <input type="email" class="form_email">
+                            </div>
+
+                            <div class="form__item form_with-100">
+                                <p class="form_p">Message</p>
+                                <textarea type="text" class="form_text" m></textarea>
+                            </div>
+
+                            <div class="form_submit_button">
+                                <input type="reset" class="form_submit" value="SEND">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="feedback_cont_data">
+                        <p class="fcd_p">Have an idea for a project? Just looking to explore and see the possibilities?
+                        <br>I'm here to help.</p>
+                        <p class="fcd_name">Malenko Boguslav</p>
+                        <div class="fcd_icon">
+                            <ul>
+                                <li>
+                                    <a href="https://vk.com/id437574824">
+                                        <img src="img/feedback/vk.png" alt="">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://github.com/slavaMalenko">
+                                        <img src="img/feedback/Github.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="fcd_email">
+                            email:
+                            <a href="mailto:denouement20@yandex.ru">denouement20@yandex.ru</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FEEDBACK end-->
     </main>
 
-    <script src="js/app.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_cont">
+                <img src="img/intro/intro_s.png" alt="">
+                <div class="footer_cont_feedback">
+                    <ul>
+                        <li><a href="#intro">Home</a></li>
+                        <li><a href="https://github.com/slavaMalenko">GitHub</a></li>
+                        <li><a href="https://vk.com/id437574824">Vk</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <p>&copy; 2021, Malenko Boguslav</p>
+            </div>
+        </div>
+    </footer>
 
+
+    <script src="js/app.js"></script>
 </body>
 </html>
