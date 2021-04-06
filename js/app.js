@@ -1,3 +1,5 @@
+// project filter start
+
 const filterBox = document.querySelectorAll('.box');
 
 document.querySelector('.portfolio_item_filter').addEventListener('click', event => {
@@ -5,7 +7,7 @@ document.querySelector('.portfolio_item_filter').addEventListener('click', event
 
     let filterClass = event.target.dataset['f'];
 
-    filterBox.forEach( elem => {
+    filterBox.forEach(elem => {
         elem.classList.remove('increase');
         elem.classList.remove('hide');
         elem.classList.remove('enlarge');
@@ -22,15 +24,24 @@ document.querySelector('.portfolio_button').addEventListener('click', event => {
 
     let filterClass = event.target.dataset['f'];
 
-    filterBox.forEach( elem => {
+    filterBox.forEach(elem => {
         elem.classList.add('increase');
     })
 })
 
+// project filter end
+
+
+
+
+
+
+// site scrolling start
+
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) {
-    anchor.addEventListener("click", function(e) {
+    anchor.addEventListener("click", function (e) {
         e.preventDefault();
         const blockID = anchor.getAttribute('href')
         document.querySelector('' + blockID).scrollIntoView({
@@ -39,6 +50,8 @@ for (let anchor of anchors) {
         });
     });
 };
+
+// site scrolling end
 
 
 
